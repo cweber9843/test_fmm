@@ -80,7 +80,7 @@ class myMatcher(object):
         self.gdf = dbc.prepare_gdf(qry_, dbc.engine_pg)
         self.gdf = self.gdf.to_crs(self.crs)
 
-    def load_data_shp(self, f_shp):
+    def load_data_shp(self, f_shp, id_ = 'track_id'):
         """
         Translate dataframe into wkt linestring.
 
@@ -89,8 +89,11 @@ class myMatcher(object):
 
         """
 
+        self.track_id_orig = id_
+        self.track_id = 'id'
         # load data
         self.gdf = gpd.read_file(f_shp)
+        self.gdf.rename(columns={id_: 'id'}, inplace=True)
         # reproject
         self.gdf = self.gdf.to_crs(epsg=self.crs)
         # convert multipoint to point:
@@ -103,7 +106,7 @@ class myMatcher(object):
     def generate_lineString(self):
 
         # make a linestring per track:
-        self.gdf_lineString = self.gdf.groupby('track_id', as_index=False).agg({'geometry': lambda x: LineString(x.tolist())})
+        self.gdf_lineString = self.gdf.groupby(self.track_id, as_index=False).agg({'geometry': lambda x: LineString(x.tolist())})
         # convert to wkt:
         self.gdf_lineString['wkt'] = self.gdf_lineString.geometry.apply(lambda x: x.to_wkt())
         self.gdf_lineString = gpd.GeoDataFrame(self.gdf_lineString, crs = self.crs)
@@ -116,16 +119,18 @@ class myMatcher(object):
         Reduce number of data points, keep only points in a distance of d meters).
         """
 
-        # helper function to do the interpolation. shapely.interpolate only creates one point, so we have to iterate over the LineString.
-        def interpolate_ls(ls, distance):
-            num_vert = int(round(ls.length / distance))
-            res = [ls.interpolate(float(n) / num_vert, normalized=True) for n in range(num_vert + 1)]
-            return LineString(res)
+        if d>0:
+            # helper function to do the interpolation. shapely.interpolate only creates one point, so we have to iterate over the LineString.
+            def interpolate_ls(ls, distance):
+                num_vert = int(round(ls.length / distance))
+                res = [ls.interpolate(float(n) / num_vert, normalized=True) for n in range(num_vert + 1)]
+                return LineString(res)
 
-        self.gdf_lineString['ls_ip'] = self.gdf_lineString.apply(lambda x: interpolate_ls(x.geometry, d), axis=1)
-        self.params.update({'d_ip': d})
-        self.is_interpolated = True
-
+            self.gdf_lineString['ls_ip'] = self.gdf_lineString.apply(lambda x: interpolate_ls(x.geometry, d), axis=1)
+            self.params.update({'d_ip': d})
+            self.is_interpolated = True
+        else:
+            pass
 
     def config_matcher(self,
                        k = 8,          # number of candidates
@@ -153,8 +158,11 @@ class myMatcher(object):
 
     def match_wkt(self):
         self.result = self.model.match_wkt(self.wkt, self.config)
-        self.id_edges = list(self.result.opath)
-        self.gdf_match = self.gdf_nw.loc[self.gdf_nw.id.isin(self.id_edges)]
+        self.id_edges_opath = list(self.result.opath)
+        self.gdf_match_opath = self.gdf_nw.loc[self.gdf_nw.uid.isin(self.id_edges_opath)]
+        # why do we never get a cpath?
+        #self.id_edges_cpath = list(self.result.cpath)
+        #self.gdf_match_cpath = self.gdf_nw.loc[self.gdf_nw.id.isin(self.id_edges_cpath)]
 
     def print_results(self):
         print("Matched path: ", list(self.result.cpath))
@@ -180,8 +188,10 @@ class myMatcher(object):
             ls = self.gdf_lineString.geometry
             mpl.pyplot.plot(ls.iloc[0].xy[0], ls.iloc[0].xy[1], 'ro', label='data')
 
-        self.gdf_match.plot(ax=self.ax, color='g', lw=5, label='match')
+        self.gdf_match_opath.plot(ax=self.ax, color='g', lw=5, label='match_opath')
+        self.gdf_match_cpath.plot(ax=self.ax, color='m', lw=5, label='match_cpath')
 
+        #l = sp.wkt.loads(self.result.pgeom.export_wkt())
         if with_params:
             # place parameters in figure:
             s_ = ''
