@@ -1,0 +1,44 @@
+[info][stmatch_app_config.cpp:48 ] Start reading stmatch configuration from arguments
+[info][stmatch_app_config.cpp:105] Finish with reading stmatch arg configuration
+[info][stmatch_app_config.cpp:109] ----   Print configuration    ----
+[info][network_config.cpp:6  ] NetworkConfig
+[info][network_config.cpp:7  ] File name: ./data/bike_centerline_v1_extract_ANVedges_source_target_rev_renamed_mini_WGS84.shp 
+[info][network_config.cpp:8  ] ID name: id 
+[info][network_config.cpp:9  ] Source name: source 
+[info][network_config.cpp:10 ] Target name: target 
+[info][gps_config.cpp:19 ] GPS format: CSV point
+[info][gps_config.cpp:20 ] File name: ./data/syntetic_data_ANV_WGS84.csv 
+[info][gps_config.cpp:21 ] ID name: id 
+[info][gps_config.cpp:22 ] x name: x 
+[info][gps_config.cpp:23 ] y name: y 
+[info][gps_config.cpp:24 ] Timestamp name: timestamp 
+[info][result_config.cpp:30 ] ResultConfig
+[info][result_config.cpp:31 ] File: mr.txt
+[info][result_config.cpp:32 ] Fields: opath cpath mgeom 
+[info][stmatch_algorithm.cpp:22 ] STMATCHAlgorithmConfig
+[info][stmatch_algorithm.cpp:23 ] k 4 radius 0.4 gps_error 0.5 vmax 80 factor 1.5
+[info][stmatch_app_config.cpp:114] Log level 0-trace
+[info][stmatch_app_config.cpp:115] Step 1
+[info][stmatch_app_config.cpp:116] Use omp false
+[info][stmatch_app_config.cpp:117] ---- Print configuration done ----
+[warning][result_config.cpp:167] Overwrite existing result file mr.txt
+[info][network.cpp:37 ] Read network from file ./data/bike_centerline_v1_extract_ANVedges_source_target_rev_renamed_mini_WGS84.shp
+[info][network.cpp:130] Number of edges 60 nodes 28
+[info][network.cpp:131] Field index: id 2 source 4 target 5
+[info][network.cpp:134] Read network done.
+[info][network_graph.cpp:17 ] Construct graph from network edges start
+[info][network_graph.cpp:30 ] Graph nodes 28 edges 60
+[info][network_graph.cpp:31 ] Construct graph from network edges end
+[info][gps_reader.cpp:239] Id index 0 x index 1 y index 2 time index 3
+[info][stmatch_app.cpp:33 ] Progress report step 1
+[info][stmatch_app.cpp:35 ] Start to match trajectories
+[info][stmatch_app.cpp:64 ] Run map matching in single thread
+[info][stmatch_app.cpp:67 ] Progress 0
+[info][stmatch_app.cpp:81 ] MM process finished
+[info][stmatch_app.cpp:87 ] Time takes 0.002
+[info][stmatch_app.cpp:88 ] Time takes excluding input 0
+[info][stmatch_app.cpp:89 ] Finish map match total points 26 matched 0
+[info][stmatch_app.cpp:91 ] Matched percentage: 0
+[info][stmatch_app.cpp:92 ] Point match speed: 0
+[info][stmatch_app.cpp:93 ] Point match speed (excluding input): -nan
+[info][stmatch_app.cpp:95 ] Time takes 0.002
