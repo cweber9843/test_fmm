@@ -1,6 +1,6 @@
 [info][stmatch_app_config.cpp:48 ] Start reading stmatch configuration from arguments
-[info][stmatch_app_config.cpp:105] Finish with reading stmatch arg configuration
-[info][stmatch_app_config.cpp:109] ----   Print configuration    ----
+[info][stmatch_app_config.cpp:77 ] Finish with reading stmatch arg configuration
+[info][stmatch_app_config.cpp:81 ] ----   Print configuration    ----
 [info][network_config.cpp:6  ] NetworkConfig
 [info][network_config.cpp:7  ] File name: ./data/bike_centerline_v1_extract_ANVedges_source_target_rev_renamed_mini_WGS84.shp 
 [info][network_config.cpp:8  ] ID name: id 
@@ -12,33 +12,1351 @@
 [info][gps_config.cpp:22 ] x name: x 
 [info][gps_config.cpp:23 ] y name: y 
 [info][gps_config.cpp:24 ] Timestamp name: timestamp 
-[info][result_config.cpp:30 ] ResultConfig
-[info][result_config.cpp:31 ] File: mr.txt
-[info][result_config.cpp:32 ] Fields: opath cpath mgeom 
+[info][result_config.cpp:34 ] ResultConfig
+[info][result_config.cpp:35 ] File: mr.txt
+[info][result_config.cpp:36 ] Fields: opath cpath mgeom 
 [info][stmatch_algorithm.cpp:22 ] STMATCHAlgorithmConfig
-[info][stmatch_algorithm.cpp:23 ] k 4 radius 0.4 gps_error 0.5 vmax 80 factor 1.5
-[info][stmatch_app_config.cpp:114] Log level 0-trace
-[info][stmatch_app_config.cpp:115] Step 1
-[info][stmatch_app_config.cpp:116] Use omp false
-[info][stmatch_app_config.cpp:117] ---- Print configuration done ----
-[warning][result_config.cpp:167] Overwrite existing result file mr.txt
+[info][stmatch_algorithm.cpp:23 ] k 4 radius 0.4 gps_error 0.5 vmax 30 factor 1.5
+[info][stmatch_app_config.cpp:86 ] Log level 0-trace
+[info][stmatch_app_config.cpp:87 ] Step 100
+[info][stmatch_app_config.cpp:88 ] Use omp false
+[info][stmatch_app_config.cpp:89 ] ---- Print configuration done ----
+[warning][result_config.cpp:188] Overwrite existing result file mr.txt
 [info][network.cpp:37 ] Read network from file ./data/bike_centerline_v1_extract_ANVedges_source_target_rev_renamed_mini_WGS84.shp
+[debug][network.cpp:69 ] Geometry type of network is Line String
+[debug][network.cpp:80 ] SRID is 4326
 [info][network.cpp:130] Number of edges 60 nodes 28
 [info][network.cpp:131] Field index: id 2 source 4 target 5
+[debug][network.cpp:176] Create boost rtree
+[debug][network.cpp:186] Create boost rtree done
 [info][network.cpp:134] Read network done.
 [info][network_graph.cpp:17 ] Construct graph from network edges start
 [info][network_graph.cpp:30 ] Graph nodes 28 edges 60
 [info][network_graph.cpp:31 ] Construct graph from network edges end
 [info][gps_reader.cpp:239] Id index 0 x index 1 y index 2 time index 3
-[info][stmatch_app.cpp:33 ] Progress report step 1
+[info][stmatch_app.cpp:33 ] Progress report step 100
 [info][stmatch_app.cpp:35 ] Start to match trajectories
 [info][stmatch_app.cpp:64 ] Run map matching in single thread
 [info][stmatch_app.cpp:67 ] Progress 0
+[trace][stmatch_algorithm.cpp:115] Count of points in trajectory 26
+[trace][stmatch_algorithm.cpp:116] Search candidates
+[trace][stmatch_algorithm.cpp:119] Trajectory candidate 
+Candidate step; index;  offset;distance; edge_id
+Candidate    0;    28;0.000453;0.000124;   12150
+Candidate    0;    29;0.000715;0.000124;   12150
+Candidate    0;    30;0.000522;0.000149;   12149
+Candidate    0;    31;0.000555;0.000149;   12149
+Candidate    1;    32;0.000210;0.000113;   12149
+Candidate    1;    33;0.000867;0.000113;   12149
+Candidate    1;    34;0.000114;0.000197;   11728
+Candidate    1;    35;0.000603;0.000197;   11728
+Candidate    2;    36;0.000967;0.000084;   10902
+Candidate    2;    37;0.000224;0.000084;   10902
+Candidate    2;    38;0.000000;0.000232;   11311
+Candidate    2;    39;0.000000;0.000232;   11728
+Candidate    3;    40;0.000663;0.000080;   10902
+Candidate    3;    41;0.000527;0.000080;   10902
+Candidate    3;    42;0.001167;0.000447;   12150
+Candidate    3;    43;0.000000;0.000447;   12150
+Candidate    4;    44;0.000392;0.000058;   10902
+Candidate    4;    45;0.000799;0.000058;   10902
+Candidate    4;    46;0.000238;0.000219;   11310
+Candidate    4;    47;0.000165;0.000219;   11310
+Candidate    5;    48;0.000309;0.000063;   10902
+Candidate    5;    49;0.000882;0.000063;   10902
+Candidate    5;    50;0.000185;0.000155;   11310
+Candidate    5;    51;0.000218;0.000155;   11310
+Candidate    6;    52;0.000251;0.000065;   10902
+Candidate    6;    53;0.000940;0.000065;   10902
+Candidate    6;    54;0.000155;0.000114;   11310
+Candidate    6;    55;0.000248;0.000114;   11310
+Candidate    7;    56;0.000055;0.000026;   11310
+Candidate    7;    57;0.000348;0.000026;   11310
+Candidate    7;    58;0.000336;0.000061;   10901
+Candidate    7;    59;0.000006;0.000061;   10901
+Candidate    8;    60;0.000049;0.000050;   11309
+Candidate    8;    61;0.000046;0.000050;   11309
+Candidate    8;    62;0.000342;0.000068;   10901
+Candidate    8;    63;0.000000;0.000068;   11310
+Candidate    9;    64;0.000049;0.000050;   11309
+Candidate    9;    65;0.000046;0.000050;   11309
+Candidate    9;    66;0.000342;0.000068;   10901
+Candidate    9;    67;0.000000;0.000068;   11310
+Candidate   10;    68;0.000435;0.000066;   10122
+Candidate   10;    69;0.000128;0.000066;   10122
+Candidate   10;    70;0.000000;0.000148;   10509
+Candidate   10;    71;0.000000;0.000148;   10902
+Candidate   11;    72;0.000278;0.000057;   10122
+Candidate   11;    73;0.000285;0.000057;   10122
+Candidate   11;    74;0.000419;0.000211;   10508
+Candidate   11;    75;0.000305;0.000211;   10508
+Candidate   12;    76;0.000125;0.000052;   10122
+Candidate   12;    77;0.000438;0.000052;   10122
+Candidate   12;    78;0.000442;0.000143;    9765
+Candidate   12;    79;0.000312;0.000143;   10121
+Candidate   13;    80;0.000125;0.000052;   10122
+Candidate   13;    81;0.000438;0.000052;   10122
+Candidate   13;    82;0.000442;0.000143;    9765
+Candidate   13;    83;0.000312;0.000143;   10121
+Candidate   14;    84;0.000257;0.000122;    9381
+Candidate   14;    85;0.000323;0.000122;    9381
+Candidate   14;    86;0.000182;0.000151;    9380
+Candidate   14;    87;0.000000;0.000151;    9764
+Candidate   15;    88;0.000104;0.000180;    9381
+Candidate   15;    89;0.000477;0.000180;    9381
+Candidate   15;    90;0.001226;0.000203;    9009
+Candidate   15;    91;0.000047;0.000203;    9009
+Candidate   16;    92;0.000104;0.000180;    9381
+Candidate   16;    93;0.000477;0.000180;    9381
+Candidate   16;    94;0.001226;0.000203;    9009
+Candidate   16;    95;0.000047;0.000203;    9009
+Candidate   17;    96;0.000994;0.000093;    9009
+Candidate   17;    97;0.000279;0.000093;    9009
+Candidate   17;    98;0.000000;0.000295;    9380
+Candidate   17;    99;0.000000;0.000295;    9381
+Candidate   18;   100;0.000132;0.000043;    9764
+Candidate   18;   101;0.000461;0.000043;    9764
+Candidate   18;   102;0.000076;0.000105;    9380
+Candidate   18;   103;0.000106;0.000105;    9380
+Candidate   19;   104;0.000886;0.000180;    9009
+Candidate   19;   105;0.000386;0.000180;    9009
+Candidate   19;   106;0.002070;0.000336;   10119
+Candidate   19;   107;0.000183;0.000336;   10119
+Candidate   20;   108;0.000886;0.000180;    9009
+Candidate   20;   109;0.000386;0.000180;    9009
+Candidate   20;   110;0.002070;0.000336;   10119
+Candidate   20;   111;0.000183;0.000336;   10119
+Candidate   21;   112;0.000886;0.000180;    9009
+Candidate   21;   113;0.000386;0.000180;    9009
+Candidate   21;   114;0.002070;0.000336;   10119
+Candidate   21;   115;0.000183;0.000336;   10119
+Candidate   22;   116;0.000646;0.000017;    9009
+Candidate   22;   117;0.000627;0.000017;    9009
+Candidate   22;   118;0.000565;0.000225;    9010
+Candidate   22;   119;0.000517;0.000225;    9010
+Candidate   23;   120;0.000454;0.000160;    9009
+Candidate   23;   121;0.000818;0.000160;    9009
+Candidate   23;   122;0.001668;0.000333;   10119
+Candidate   23;   123;0.000585;0.000333;   10119
+Candidate   24;   124;0.000085;0.000120;    9009
+Candidate   24;   125;0.001188;0.000120;    9009
+Candidate   24;   126;0.000185;0.000151;    8650
+Candidate   24;   127;0.000000;0.000151;    9010
+Candidate   25;   128;0.000235;0.000021;    9009
+Candidate   25;   129;0.001037;0.000021;    9009
+Candidate   25;   130;0.000190;0.000125;    9010
+Candidate   25;   131;0.000893;0.000125;    9010
+
+[trace][stmatch_algorithm.cpp:121] Generate dummy graph
+[trace][stmatch_algorithm.cpp:123] Generate composite_graph
+[trace][stmatch_algorithm.cpp:125] Generate composite_graph
+[trace][stmatch_algorithm.cpp:127] Update cost in transition graph
+[trace][stmatch_algorithm.cpp:162] Update transition graph
+[trace][stmatch_algorithm.cpp:168] Update layer 0 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 28
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 28
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 32,33,34,35
+[trace][stmatch_algorithm.cpp:234]   Node u 28 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 27 temp dist 0.00071496
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 29
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 29
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 32,33,34,35
+[trace][stmatch_algorithm.cpp:234]   Node u 29 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 27 temp dist 0.000452517
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 30
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 30
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 32,33,34,35
+[trace][stmatch_algorithm.cpp:234]   Node u 30 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 22 temp dist 0.000555412
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 31
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 31
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 32,33,34,35
+[trace][stmatch_algorithm.cpp:234]   Node u 31 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 22 temp dist 0.000521593
+[trace][stmatch_algorithm.cpp:248]   Examine node v 33 temp dist 0.000311616
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 1 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 32
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 32
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 36,37,38,39
+[trace][stmatch_algorithm.cpp:234]   Node u 32 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 22 temp dist 0.000867029
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 33
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 33
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 36,37,38,39
+[trace][stmatch_algorithm.cpp:234]   Node u 33 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 22 temp dist 0.000209977
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 34
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 34
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 36,37,38,39
+[trace][stmatch_algorithm.cpp:234]   Node u 34 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 26 temp dist 0.000603389
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 35
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 35
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 36,37,38,39
+[trace][stmatch_algorithm.cpp:234]   Node u 35 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 26 temp dist 0.000113796
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 2 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 36
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 36
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 40,41,42,43
+[trace][stmatch_algorithm.cpp:234]   Node u 36 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000223915
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 37
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 37
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 40,41,42,43
+[trace][stmatch_algorithm.cpp:234]   Node u 37 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000966818
+[trace][stmatch_algorithm.cpp:248]   Examine node v 41 temp dist 0.000303534
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 38
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 38
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 40,41,42,43
+[trace][stmatch_algorithm.cpp:234]   Node u 38 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 21 temp dist 0.000772505
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 39
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 39
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 40,41,42,43
+[trace][stmatch_algorithm.cpp:234]   Node u 39 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 26 temp dist 0.000717186
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 3 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 40
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 40
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 44,45,46,47
+[trace][stmatch_algorithm.cpp:234]   Node u 40 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000527449
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 41
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 41
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 44,45,46,47
+[trace][stmatch_algorithm.cpp:234]   Node u 41 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000663284
+[trace][stmatch_algorithm.cpp:248]   Examine node v 45 temp dist 0.000271142
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 42
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 42
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 44,45,46,47
+[trace][stmatch_algorithm.cpp:234]   Node u 42 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 27 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 27 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 27 dist 0
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 43
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 43
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 44,45,46,47
+[trace][stmatch_algorithm.cpp:234]   Node u 43 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 27 temp dist 0.00116748
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 4 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 44
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 44
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 48,49,50,51
+[trace][stmatch_algorithm.cpp:234]   Node u 44 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000798592
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 45
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 45
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 48,49,50,51
+[trace][stmatch_algorithm.cpp:234]   Node u 45 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000392141
+[trace][stmatch_algorithm.cpp:248]   Examine node v 49 temp dist 8.31944e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 46
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 46
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 48,49,50,51
+[trace][stmatch_algorithm.cpp:234]   Node u 46 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000165268
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 47
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 47
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 48,49,50,51
+[trace][stmatch_algorithm.cpp:234]   Node u 47 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000237726
+[trace][stmatch_algorithm.cpp:248]   Examine node v 51 temp dist 5.28864e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 5 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 48
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 48
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 52,53,54,55
+[trace][stmatch_algorithm.cpp:234]   Node u 48 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000881786
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 49
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 49
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 52,53,54,55
+[trace][stmatch_algorithm.cpp:234]   Node u 49 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000308947
+[trace][stmatch_algorithm.cpp:248]   Examine node v 53 temp dist 5.83105e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 50
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 50
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 52,53,54,55
+[trace][stmatch_algorithm.cpp:234]   Node u 50 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000218154
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 51
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 51
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 52,53,54,55
+[trace][stmatch_algorithm.cpp:234]   Node u 51 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000184839
+[trace][stmatch_algorithm.cpp:248]   Examine node v 55 temp dist 2.993e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 6 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 52
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 52
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 56,57,58,59
+[trace][stmatch_algorithm.cpp:234]   Node u 52 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000940097
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 53
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 53
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 56,57,58,59
+[trace][stmatch_algorithm.cpp:234]   Node u 53 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.000250636
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 54
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 54
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 56,57,58,59
+[trace][stmatch_algorithm.cpp:234]   Node u 54 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000248084
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 55
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 55
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 56,57,58,59
+[trace][stmatch_algorithm.cpp:234]   Node u 55 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000154909
+[trace][stmatch_algorithm.cpp:248]   Examine node v 57 temp dist 9.99917e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 7 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 56
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 56
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 60,61,62,63
+[trace][stmatch_algorithm.cpp:234]   Node u 56 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000348076
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 57
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 57
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 60,61,62,63
+[trace][stmatch_algorithm.cpp:234]   Node u 57 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 5.49177e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 58
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 58
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 60,61,62,63
+[trace][stmatch_algorithm.cpp:234]   Node u 58 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 5.7125e-06
+[trace][stmatch_algorithm.cpp:248]   Examine node v 62 temp dist 5.7125e-06
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 59
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 59
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 60,61,62,63
+[trace][stmatch_algorithm.cpp:234]   Node u 59 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 0.000336047
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 8 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 60
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 60
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 64,65,66,67
+[trace][stmatch_algorithm.cpp:234]   Node u 60 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 4.63076e-05
+[trace][stmatch_algorithm.cpp:248]   Examine node v 64 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 64 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 64 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 64
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 4.63076e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 0,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 61
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 61
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 64,65,66,67
+[trace][stmatch_algorithm.cpp:234]   Node u 61 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 4.90865e-05
+[trace][stmatch_algorithm.cpp:248]   Examine node v 65 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 65 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 65 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 65
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 4.90865e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,0,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 62
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 62
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 64,65,66,67
+[trace][stmatch_algorithm.cpp:234]   Node u 62 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 5.42101e-20
+[trace][stmatch_algorithm.cpp:248]   Examine node v 66 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 66 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 66 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 66
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 5.42101e-20
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,0,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 63
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 63
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 64,65,66,67
+[trace][stmatch_algorithm.cpp:234]   Node u 63 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000402993
+[trace][stmatch_algorithm.cpp:248]   Examine node v 67 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 67 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 67 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 67
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000402993
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,0
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 9 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 64
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 64
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 68,69,70,71
+[trace][stmatch_algorithm.cpp:234]   Node u 64 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 4.63076e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 65
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 65
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 68,69,70,71
+[trace][stmatch_algorithm.cpp:234]   Node u 65 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 4.90865e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 66
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 66
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 68,69,70,71
+[trace][stmatch_algorithm.cpp:234]   Node u 66 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 18 temp dist 5.42101e-20
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 67
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 67
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 68,69,70,71
+[trace][stmatch_algorithm.cpp:234]   Node u 67 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 20 temp dist 0.000402993
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 10 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 68
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 68
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 72,73,74,75
+[trace][stmatch_algorithm.cpp:234]   Node u 68 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000127932
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 69
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 69
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 72,73,74,75
+[trace][stmatch_algorithm.cpp:234]   Node u 69 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000435039
+[trace][stmatch_algorithm.cpp:248]   Examine node v 73 temp dist 0.000157267
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 70
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 70
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 72,73,74,75
+[trace][stmatch_algorithm.cpp:234]   Node u 70 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 16 temp dist 0.000295432
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 71
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 71
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 72,73,74,75
+[trace][stmatch_algorithm.cpp:234]   Node u 71 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 19 temp dist 0.00119073
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 11 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 72
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 72
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 76,77,78,79
+[trace][stmatch_algorithm.cpp:234]   Node u 72 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000285199
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 73
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 73
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 76,77,78,79
+[trace][stmatch_algorithm.cpp:234]   Node u 73 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000277772
+[trace][stmatch_algorithm.cpp:248]   Examine node v 77 temp dist 0.000152565
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 74
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 74
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 76,77,78,79
+[trace][stmatch_algorithm.cpp:234]   Node u 74 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 15 temp dist 0.00030473
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 75
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 75
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 76,77,78,79
+[trace][stmatch_algorithm.cpp:234]   Node u 75 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 15 temp dist 0.000419102
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 12 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 76
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 76
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 80,81,82,83
+[trace][stmatch_algorithm.cpp:234]   Node u 76 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 80 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 80 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 80 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 80
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 0,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 77
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 77
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 80,81,82,83
+[trace][stmatch_algorithm.cpp:234]   Node u 77 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 81 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 81 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 81 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 81
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,0,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 78
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 78
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 80,81,82,83
+[trace][stmatch_algorithm.cpp:234]   Node u 78 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 9 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:248]   Examine node v 82 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 82 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 9 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 68 temp dist 0.000435039
+[trace][stmatch_algorithm.cpp:248]   Examine node v 69 temp dist 0.000127932
+[trace][stmatch_algorithm.cpp:248]   Examine node v 72 temp dist 0.000277772
+[trace][stmatch_algorithm.cpp:248]   Examine node v 73 temp dist 0.000285199
+[trace][stmatch_algorithm.cpp:248]   Examine node v 76 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 77 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 80 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 81 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:234]   Node u 82 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 82
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,0,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 79
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 79
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 80,81,82,83
+[trace][stmatch_algorithm.cpp:234]   Node u 79 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 9 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:248]   Examine node v 83 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 83 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 9 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 68 temp dist 0.000435039
+[trace][stmatch_algorithm.cpp:248]   Examine node v 69 temp dist 0.000127932
+[trace][stmatch_algorithm.cpp:248]   Examine node v 72 temp dist 0.000277772
+[trace][stmatch_algorithm.cpp:248]   Examine node v 73 temp dist 0.000285199
+[trace][stmatch_algorithm.cpp:248]   Examine node v 76 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 77 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 80 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 81 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:234]   Node u 83 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 83
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,0
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 13 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 80
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 80
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 84,85,86,87
+[trace][stmatch_algorithm.cpp:234]   Node u 80 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 81
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 81
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 84,85,86,87
+[trace][stmatch_algorithm.cpp:234]   Node u 81 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 82
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 82
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 84,85,86,87
+[trace][stmatch_algorithm.cpp:234]   Node u 82 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 9 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 9 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 68 temp dist 0.000435039
+[trace][stmatch_algorithm.cpp:248]   Examine node v 69 temp dist 0.000127932
+[trace][stmatch_algorithm.cpp:248]   Examine node v 72 temp dist 0.000277772
+[trace][stmatch_algorithm.cpp:248]   Examine node v 73 temp dist 0.000285199
+[trace][stmatch_algorithm.cpp:248]   Examine node v 76 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 77 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 80 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 81 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 83
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 83
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 84,85,86,87
+[trace][stmatch_algorithm.cpp:234]   Node u 83 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 9 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 9 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 68 temp dist 0.000435039
+[trace][stmatch_algorithm.cpp:248]   Examine node v 69 temp dist 0.000127932
+[trace][stmatch_algorithm.cpp:248]   Examine node v 72 temp dist 0.000277772
+[trace][stmatch_algorithm.cpp:248]   Examine node v 73 temp dist 0.000285199
+[trace][stmatch_algorithm.cpp:248]   Examine node v 76 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 77 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 80 temp dist 0.000125208
+[trace][stmatch_algorithm.cpp:248]   Examine node v 81 temp dist 0.000437763
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:248]   Examine node v 14 temp dist 0.000562971
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 14 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 84
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 84
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 88,89,90,91
+[trace][stmatch_algorithm.cpp:234]   Node u 84 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000323345
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 85
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 85
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 88,89,90,91
+[trace][stmatch_algorithm.cpp:234]   Node u 85 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000257231
+[trace][stmatch_algorithm.cpp:248]   Examine node v 89 temp dist 0.000153635
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 86
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 86
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 88,89,90,91
+[trace][stmatch_algorithm.cpp:234]   Node u 86 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 6 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 6 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 6 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 78 temp dist 0.000442255
+[trace][stmatch_algorithm.cpp:248]   Examine node v 82 temp dist 0.000442255
+[trace][stmatch_algorithm.cpp:248]   Examine node v 87 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 87 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:248]   Examine node v 100 temp dist 0.000131685
+[trace][stmatch_algorithm.cpp:248]   Examine node v 101 temp dist 0.000461267
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000592952
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0.000442255
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000592952
+[trace][stmatch_algorithm.cpp:248]   Examine node v 9 temp dist 0.000442255
+[trace][stmatch_algorithm.cpp:234]   Node u 87 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000592952
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 87
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 87
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 88,89,90,91
+[trace][stmatch_algorithm.cpp:234]   Node u 87 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000592952
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 15 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 88
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 88
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 92,93,94,95
+[trace][stmatch_algorithm.cpp:234]   Node u 88 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000476981
+[trace][stmatch_algorithm.cpp:248]   Examine node v 92 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 92 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 92 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 92
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000476981
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 0,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 89
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 89
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 92,93,94,95
+[trace][stmatch_algorithm.cpp:234]   Node u 89 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000103596
+[trace][stmatch_algorithm.cpp:248]   Examine node v 93 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 93 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 93 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 93
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000103596
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,0,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 90
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 90
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 92,93,94,95
+[trace][stmatch_algorithm.cpp:234]   Node u 90 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 4.65425e-05
+[trace][stmatch_algorithm.cpp:248]   Examine node v 94 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 94 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 94 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 94
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 4.65425e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,0,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 91
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 91
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 92,93,94,95
+[trace][stmatch_algorithm.cpp:234]   Node u 91 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.00122596
+[trace][stmatch_algorithm.cpp:248]   Examine node v 95 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 95 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 95 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 95
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.00122596
+[trace][stmatch_algorithm.cpp:248]   Examine node v 97 temp dist 0.00023213
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,0
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 16 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 92
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 92
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 96,97,98,99
+[trace][stmatch_algorithm.cpp:234]   Node u 92 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000476981
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 93
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 93
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 96,97,98,99
+[trace][stmatch_algorithm.cpp:234]   Node u 93 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000103596
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 94
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 94
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 96,97,98,99
+[trace][stmatch_algorithm.cpp:234]   Node u 94 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 4.65425e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 95
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 95
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 96,97,98,99
+[trace][stmatch_algorithm.cpp:234]   Node u 95 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.00122596
+[trace][stmatch_algorithm.cpp:248]   Examine node v 97 temp dist 0.00023213
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 17 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 96
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 96
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 100,101,102,103
+[trace][stmatch_algorithm.cpp:234]   Node u 96 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000278672
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 97
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 97
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 100,101,102,103
+[trace][stmatch_algorithm.cpp:234]   Node u 97 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000993832
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 98
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 98
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 100,101,102,103
+[trace][stmatch_algorithm.cpp:234]   Node u 98 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 6 temp dist 0.000181559
+[trace][stmatch_algorithm.cpp:248]   Examine node v 102 temp dist 7.55062e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 99
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 99
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 100,101,102,103
+[trace][stmatch_algorithm.cpp:234]   Node u 99 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 7 temp dist 0.000580577
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 18 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 100
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 100
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 104,105,106,107
+[trace][stmatch_algorithm.cpp:234]   Node u 100 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000461267
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 101
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 101
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 104,105,106,107
+[trace][stmatch_algorithm.cpp:234]   Node u 101 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000131685
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 102
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 102
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 104,105,106,107
+[trace][stmatch_algorithm.cpp:234]   Node u 102 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 6 temp dist 0.000106053
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 103
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 103
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 104,105,106,107
+[trace][stmatch_algorithm.cpp:234]   Node u 103 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 6 temp dist 7.55062e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 19 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 104
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 104
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 108,109,110,111
+[trace][stmatch_algorithm.cpp:234]   Node u 104 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:248]   Examine node v 108 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 108 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 108 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 108
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:248]   Examine node v 112 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 112 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 112 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 0,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 105
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 105
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 108,109,110,111
+[trace][stmatch_algorithm.cpp:234]   Node u 105 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 109 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 109 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 109 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 109
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 113 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 113 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 113 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 117 temp dist 0.000240612
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,0,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 106
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 106
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 108,109,110,111
+[trace][stmatch_algorithm.cpp:234]   Node u 106 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000183275
+[trace][stmatch_algorithm.cpp:248]   Examine node v 110 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 110 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 110 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 110
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000183275
+[trace][stmatch_algorithm.cpp:248]   Examine node v 114 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 114 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 114 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000183275
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,0,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 107
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 107
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 108,109,110,111
+[trace][stmatch_algorithm.cpp:234]   Node u 107 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00206958
+[trace][stmatch_algorithm.cpp:248]   Examine node v 111 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 111 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 111 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 111
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00206958
+[trace][stmatch_algorithm.cpp:248]   Examine node v 115 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 115 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 115 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00206958
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,0
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 20 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 108
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 108
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 112,113,114,115
+[trace][stmatch_algorithm.cpp:234]   Node u 108 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:248]   Examine node v 112 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 112 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 112 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 112
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 0,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 109
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 109
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 112,113,114,115
+[trace][stmatch_algorithm.cpp:234]   Node u 109 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 113 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 113 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 113 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 113
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 117 temp dist 0.000240612
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,0,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 110
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 110
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 112,113,114,115
+[trace][stmatch_algorithm.cpp:234]   Node u 110 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000183275
+[trace][stmatch_algorithm.cpp:248]   Examine node v 114 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 114 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 114 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 114
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000183275
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,0,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 111
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 111
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 112,113,114,115
+[trace][stmatch_algorithm.cpp:234]   Node u 111 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00206958
+[trace][stmatch_algorithm.cpp:248]   Examine node v 115 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 115 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 115 dist 0
+[trace][stmatch_algorithm.cpp:239]   Remove target 115
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00206958
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,0
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 21 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 112
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 112
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 116,117,118,119
+[trace][stmatch_algorithm.cpp:234]   Node u 112 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 113
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 113
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 116,117,118,119
+[trace][stmatch_algorithm.cpp:234]   Node u 113 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 117 temp dist 0.000240612
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 114
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 114
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 116,117,118,119
+[trace][stmatch_algorithm.cpp:234]   Node u 114 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000183275
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 115
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 115
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 116,117,118,119
+[trace][stmatch_algorithm.cpp:234]   Node u 115 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00206958
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 22 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 116
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 116
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 120,121,122,123
+[trace][stmatch_algorithm.cpp:234]   Node u 116 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000626729
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 117
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 117
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 120,121,122,123
+[trace][stmatch_algorithm.cpp:234]   Node u 117 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000645776
+[trace][stmatch_algorithm.cpp:248]   Examine node v 121 temp dist 0.000191681
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 118
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 118
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 120,121,122,123
+[trace][stmatch_algorithm.cpp:234]   Node u 118 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 2 temp dist 0.000517492
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 119
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 119
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 120,121,122,123
+[trace][stmatch_algorithm.cpp:234]   Node u 119 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 2 temp dist 0.000565348
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 23 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 120
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 120
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 124,125,126,127
+[trace][stmatch_algorithm.cpp:234]   Node u 120 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.00081841
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 121
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 121
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 124,125,126,127
+[trace][stmatch_algorithm.cpp:234]   Node u 121 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.000454094
+[trace][stmatch_algorithm.cpp:248]   Examine node v 125 temp dist 0.000369109
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 122
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 122
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 124,125,126,127
+[trace][stmatch_algorithm.cpp:234]   Node u 122 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.000584524
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 123
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 123
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 124,125,126,127
+[trace][stmatch_algorithm.cpp:234]   Node u 123 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 8 temp dist 0.00166834
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:168] Update layer 24 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 124
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 124
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 128,129,130,131
+[trace][stmatch_algorithm.cpp:234]   Node u 124 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.00118752
+[trace][stmatch_algorithm.cpp:248]   Examine node v 128 temp dist 0.000150167
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 125
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 125
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 128,129,130,131
+[trace][stmatch_algorithm.cpp:234]   Node u 125 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 8.49852e-05
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 126
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 126
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 128,129,130,131
+[trace][stmatch_algorithm.cpp:234]   Node u 126 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 3 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 3 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:234]   Node u 3 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 90 temp dist 0.00122596
+[trace][stmatch_algorithm.cpp:248]   Examine node v 91 temp dist 4.65425e-05
+[trace][stmatch_algorithm.cpp:248]   Examine node v 94 temp dist 0.00122596
+[trace][stmatch_algorithm.cpp:248]   Examine node v 95 temp dist 4.65425e-05
+[trace][stmatch_algorithm.cpp:248]   Examine node v 96 temp dist 0.000993832
+[trace][stmatch_algorithm.cpp:248]   Examine node v 97 temp dist 0.000278672
+[trace][stmatch_algorithm.cpp:248]   Examine node v 104 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 105 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:248]   Examine node v 108 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 109 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:248]   Examine node v 112 temp dist 0.000886388
+[trace][stmatch_algorithm.cpp:248]   Examine node v 113 temp dist 0.000386116
+[trace][stmatch_algorithm.cpp:248]   Examine node v 116 temp dist 0.000645776
+[trace][stmatch_algorithm.cpp:248]   Examine node v 117 temp dist 0.000626729
+[trace][stmatch_algorithm.cpp:248]   Examine node v 118 temp dist 0.000565348
+[trace][stmatch_algorithm.cpp:248]   Examine node v 119 temp dist 0.000517492
+[trace][stmatch_algorithm.cpp:248]   Examine node v 120 temp dist 0.000454094
+[trace][stmatch_algorithm.cpp:248]   Examine node v 121 temp dist 0.00081841
+[trace][stmatch_algorithm.cpp:248]   Examine node v 124 temp dist 8.49852e-05
+[trace][stmatch_algorithm.cpp:248]   Examine node v 125 temp dist 0.00118752
+[trace][stmatch_algorithm.cpp:248]   Examine node v 127 temp dist 0
+[trace][stmatch_algorithm.cpp:263]     Insert key 127 0 into pmap and dmap
+[trace][stmatch_algorithm.cpp:248]   Examine node v 128 temp dist 0.000235152
+[trace][stmatch_algorithm.cpp:248]   Examine node v 129 temp dist 0.00103735
+[trace][stmatch_algorithm.cpp:248]   Examine node v 130 temp dist 0.000189971
+[trace][stmatch_algorithm.cpp:248]   Examine node v 131 temp dist 0.000892869
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.0012725
+[trace][stmatch_algorithm.cpp:248]   Examine node v 2 temp dist 0.00108284
+[trace][stmatch_algorithm.cpp:248]   Examine node v 5 temp dist 0.0012725
+[trace][stmatch_algorithm.cpp:248]   Examine node v 2 temp dist 0.00108284
+[trace][stmatch_algorithm.cpp:234]   Node u 127 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 2 temp dist 0.00108284
+[trace][stmatch_algorithm.cpp:248]   Examine node v 130 temp dist 0.000189971
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:190]   Calculate distance from source 127
+[trace][stmatch_algorithm.cpp:197]   Upperbound shortest path 0 
+[trace][stmatch_algorithm.cpp:217] Upperbound shortest path source 127
+[trace][stmatch_algorithm.cpp:218] Upperbound shortest path targets 128,129,130,131
+[trace][stmatch_algorithm.cpp:234]   Node u 127 dist 0
+[trace][stmatch_algorithm.cpp:248]   Examine node v 2 temp dist 0.00108284
+[trace][stmatch_algorithm.cpp:248]   Examine node v 130 temp dist 0.000189971
+[trace][stmatch_algorithm.cpp:273]   Update distances
+[trace][stmatch_algorithm.cpp:282]   Distance value 1.79769e+308,1.79769e+308,1.79769e+308,1.79769e+308
+[trace][stmatch_algorithm.cpp:200]   Update property of transition graph 
+[trace][stmatch_algorithm.cpp:211] Update layer done
+[trace][stmatch_algorithm.cpp:179] Update transition graph done
+[trace][stmatch_algorithm.cpp:130] Optimal path inference
+[trace][transition_graph.cpp:63 ] Backtrack on transition graph
+[trace][transition_graph.cpp:82 ] Backtrack on transition graph done
+[trace][stmatch_algorithm.cpp:132] Optimal path size 26
+[debug][stmatch_algorithm.cpp:287] Build cpath from optimal candidate path
+[trace][stmatch_algorithm.cpp:295] Insert index 0
+[trace][stmatch_algorithm.cpp:300] Check a 12150 b 12149
+[trace][network_graph.cpp:56 ] Shortest path starts
+[trace][network_graph.cpp:163] Backtrack starts
+[trace][stmatch_algorithm.cpp:149] Opath is 12150,12149,10902,10902,10902,10902,10902,11310,11309,11309,10122,10122,10122,10122,9381,9381,9381,9009,9764,9009,9009,9009,9009,9009,9009,9009
+[trace][stmatch_algorithm.cpp:150] Indices is 
+[trace][stmatch_algorithm.cpp:151] Complete path is 
 [info][stmatch_app.cpp:81 ] MM process finished
-[info][stmatch_app.cpp:87 ] Time takes 0.002
-[info][stmatch_app.cpp:88 ] Time takes excluding input 0
+[info][stmatch_app.cpp:87 ] Time takes 0.006
+[info][stmatch_app.cpp:88 ] Time takes excluding input 0.004
 [info][stmatch_app.cpp:89 ] Finish map match total points 26 matched 0
 [info][stmatch_app.cpp:91 ] Matched percentage: 0
 [info][stmatch_app.cpp:92 ] Point match speed: 0
-[info][stmatch_app.cpp:93 ] Point match speed (excluding input): -nan
-[info][stmatch_app.cpp:95 ] Time takes 0.002
+[info][stmatch_app.cpp:93 ] Point match speed (excluding input): 0
+[info][stmatch_app.cpp:95 ] Time takes 0.006
