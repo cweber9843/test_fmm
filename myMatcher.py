@@ -159,10 +159,10 @@ class myMatcher(object):
     def match_wkt(self):
         self.result = self.model.match_wkt(self.wkt, self.config)
         self.id_edges_opath = list(self.result.opath)
-        self.gdf_match_opath = self.gdf_nw.loc[self.gdf_nw.uid.isin(self.id_edges_opath)]
+        self.gdf_match_opath = self.gdf_nw.loc[self.gdf_nw.id.isin(self.id_edges_opath)]
         # why do we never get a cpath?
-        #self.id_edges_cpath = list(self.result.cpath)
-        #self.gdf_match_cpath = self.gdf_nw.loc[self.gdf_nw.id.isin(self.id_edges_cpath)]
+        self.id_edges_cpath = list(self.result.cpath)
+        self.gdf_match_cpath = self.gdf_nw.loc[self.gdf_nw.id.isin(self.id_edges_cpath)]
 
     def print_results(self):
         print("Matched path: ", list(self.result.cpath))
@@ -188,7 +188,7 @@ class myMatcher(object):
             ls = self.gdf_lineString.geometry
             mpl.pyplot.plot(ls.iloc[0].xy[0], ls.iloc[0].xy[1], 'ro', label='data')
 
-        self.gdf_match_opath.plot(ax=self.ax, color='g', lw=5, label='match_opath')
+        self.gdf_match_opath.plot(ax=self.ax, color='g', lw=8, label='match_opath')
         self.gdf_match_cpath.plot(ax=self.ax, color='m', lw=5, label='match_cpath')
 
         #l = sp.wkt.loads(self.result.pgeom.export_wkt())
