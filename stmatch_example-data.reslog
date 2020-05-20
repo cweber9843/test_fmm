@@ -1,0 +1,36 @@
+[info][stmatch_app_config.cpp:48 ] Start reading stmatch configuration from arguments
+[info][stmatch_app_config.cpp:77 ] Finish with reading stmatch arg configuration
+[info][stmatch_app_config.cpp:81 ] ----   Print configuration    ----
+[info][network_config.cpp:6  ] NetworkConfig
+[info][network_config.cpp:7  ] File name: ./data/edges.shp 
+[info][network_config.cpp:8  ] ID name: id 
+[info][network_config.cpp:9  ] Source name: source 
+[info][network_config.cpp:10 ] Target name: target 
+[info][gps_config.cpp:19 ] GPS format: CSV point
+[info][gps_config.cpp:20 ] File name: ./data/gps.csv 
+[info][gps_config.cpp:21 ] ID name: id 
+[info][gps_config.cpp:22 ] x name: x 
+[info][gps_config.cpp:23 ] y name: y 
+[info][gps_config.cpp:24 ] Timestamp name: timestamp 
+[info][result_config.cpp:34 ] ResultConfig
+[info][result_config.cpp:35 ] File: mr.txt
+[info][result_config.cpp:36 ] Fields: cpath mgeom 
+[info][stmatch_algorithm.cpp:22 ] STMATCHAlgorithmConfig
+[info][stmatch_algorithm.cpp:23 ] k 8 radius 300 gps_error 50 vmax 30 factor 1.5
+[info][stmatch_app_config.cpp:86 ] Log level 0-trace
+[info][stmatch_app_config.cpp:87 ] Step 100
+[info][stmatch_app_config.cpp:88 ] Use omp false
+[info][stmatch_app_config.cpp:89 ] ---- Print configuration done ----
+[warning][result_config.cpp:188] Overwrite existing result file mr.txt
+[info][network.cpp:37 ] Read network from file ./data/edges.shp
+[debug][network.cpp:69 ] Geometry type of network is Line String
+[debug][network.cpp:80 ] SRID is 4326
+[info][network.cpp:130] Number of edges 30 nodes 17
+[info][network.cpp:131] Field index: id 1 source 2 target 3
+[debug][network.cpp:176] Create boost rtree
+[debug][network.cpp:186] Create boost rtree done
+[info][network.cpp:134] Read network done.
+[info][network_graph.cpp:17 ] Construct graph from network edges start
+[info][network_graph.cpp:30 ] Graph nodes 17 edges 30
+[info][network_graph.cpp:31 ] Construct graph from network edges end
+[critical][gps_reader.cpp:232] Geom column y not found
